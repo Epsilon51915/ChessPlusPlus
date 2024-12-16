@@ -18,8 +18,8 @@ class Pawn : public virtual Piece
 
     public:
         Pawn(bool, int);
-        void move();
-        bool move_valid();
+        virtual void move() override;
+        virtual bool move_valid() override;
 };
 
 class Rook : public virtual Piece
@@ -28,8 +28,8 @@ class Rook : public virtual Piece
         bool moved;
     public:
         Rook(bool, int);
-        void move();
-        bool move_valid();
+        virtual void move() override;
+        virtual bool move_valid() override;
 };
 
 class Knight : public virtual Piece
@@ -38,8 +38,8 @@ class Knight : public virtual Piece
 
     public:
         Knight(bool, int);
-        void move();
-        bool move_valid();
+        virtual void move() override;
+        virtual bool move_valid() override;
 };
 
 class Bishop : public virtual Piece
@@ -48,8 +48,8 @@ class Bishop : public virtual Piece
 
     public:
         Bishop(bool, int);
-        void move();
-        bool move_valid();
+        virtual void move() override;
+        virtual bool move_valid() override;
 };
 
 class Queen : public virtual Piece
@@ -58,8 +58,8 @@ class Queen : public virtual Piece
 
     public:
         Queen(bool);
-        void move();
-        bool move_valid();
+        virtual void move() override;
+        virtual bool move_valid() override;
 };
 
 class King : public virtual Piece
@@ -68,8 +68,8 @@ class King : public virtual Piece
         bool moved;
     public:
         King(bool);
-        void move();
-        bool move_valid();
+        virtual void move() override;
+        virtual bool move_valid() override;
 };
 
 #endif
