@@ -1,70 +1,41 @@
 #include "piece.hpp"
+#include <iostream>
 
-Pawn::Pawn(bool isWhite, int file_)
+using namespace std;
+
+Pawn::Pawn(bool isWhite)
 {
+    cout << "Pawn" << endl;
     moved = false;
     piece_type = 'P';
-    if(isWhite)
-    {
-        rank = 2;
-    }
-    else
-    {
-        rank = 7;
-    }
-    file = file_;
 }
 
 void Pawn::move() {}
 bool Pawn::move_valid() {return true;}
 
-Rook::Rook(bool isWhite, int file_)
+Rook::Rook(bool isWhite)
 {
+    cout << "Rook" << endl;
     moved = false;
     piece_type = 'R';
-    if(isWhite)
-    {
-        rank = 1;
-    }
-    else
-    {
-        rank = 8;
-    }
-    file = file_;
 }
 
 void Rook::move() {}
 bool Rook::move_valid() {return true;}
 
-Knight::Knight(bool isWhite, int file_)
+Knight::Knight(bool isWhite)
 {
+    cout << "Knight" << endl;
     piece_type = 'N';
-    if(isWhite)
-    {
-        rank = 1;
-    }
-    else
-    {
-        rank = 8;
-    }
-    file = file_; 
 }
 
 void Knight::move() {}
 bool Knight::move_valid() {return true;}
 
-Bishop::Bishop(bool isWhite, int file_)
+Bishop::Bishop(bool isWhite)
 {
+    cout << "Bishop" << endl;
     piece_type = 'B';
-    if(isWhite)
-    {
-        rank = 1;
-    }
-    else
-    {
-        rank = 8;
-    }
-    file = file_;
 }
 
 void Bishop::move() {}
@@ -72,16 +43,8 @@ bool Bishop::move_valid() {return true;}
 
 Queen::Queen(bool isWhite)
 {
+    cout << "Queen" << endl;
     piece_type = 'Q';
-    if(isWhite)
-    {
-        rank = 1;
-    }
-    else
-    {
-        rank = 8;
-    }
-    file = 4;
 }
 
 void Queen::move() {}
@@ -89,17 +52,9 @@ bool Queen::move_valid() {return true;}
 
 King::King(bool isWhite)
 {
+    cout << "King" << endl;
     piece_type = 'K';
     moved = false;
-    if(isWhite)
-    {
-        rank = 1;
-    }
-    else
-    {
-        rank = 8;
-    }
-    file = 5;
 }
 
 void King::move() {}

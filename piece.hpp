@@ -11,13 +11,18 @@ class Piece
     virtual bool move_valid() = 0;
 };
 
+class Blank : public virtual Piece
+{
+    
+};
+
 class Pawn : public virtual Piece
 {
     private:
         bool moved;
 
     public:
-        Pawn(bool, int);
+        Pawn(bool);
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -27,7 +32,7 @@ class Rook : public virtual Piece
     private:
         bool moved;
     public:
-        Rook(bool, int);
+        Rook(bool);
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -37,7 +42,7 @@ class Knight : public virtual Piece
     private:
 
     public:
-        Knight(bool, int);
+        Knight(bool);
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -47,7 +52,7 @@ class Bishop : public virtual Piece
     private:
 
     public:
-        Bishop(bool, int);
+        Bishop(bool);
         virtual void move() override;
         virtual bool move_valid() override;
 };
