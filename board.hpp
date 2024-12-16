@@ -12,6 +12,7 @@ class Board
         Tile board[8][8];
     public:
         Board();
+        void display();
 
 };
 
