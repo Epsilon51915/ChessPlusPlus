@@ -1,12 +1,12 @@
 #include <iostream>
-#include "board.hpp"
+#include "game.hpp"
 
 using namespace std;
 
 int main()
 {
     cout << "Hello, world!" << endl;
-    Board board;
-    board.display();
+    Game game;
+    game.gameLoop();
     return 0;
 }
