@@ -9,14 +9,14 @@ class Tile
         bool contains_piece;
         char file;
         int rank;
+        Piece * piece;
     public:
         Tile();
         Tile(char, int);
         void pieceMoveOn();
         void pieceMoveOff();
         bool tileContainsPiece(Piece);
-
-        void TESTFCN();
+        void displayFileAndRank();
 };
 
 #endif
