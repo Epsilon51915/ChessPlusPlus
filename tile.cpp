@@ -7,7 +7,6 @@ Tile::Tile()
 {
     file = 'z';
     rank = 0;
-    // piece->piece_type = 'Z';
 }
 
 Tile::Tile(char file_, int rank_)
@@ -19,4 +18,14 @@ Tile::Tile(char file_, int rank_)
 void Tile::displayFileAndRank()
 {
     cout << file << rank;
+}
+
+bool Tile::empty()
+{
+    return !piece;
+}
+
+char Tile::pieceType()
+{
+    return piece->piece_type;
 }
