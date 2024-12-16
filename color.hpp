@@ -11,6 +11,7 @@ class Color
     public:
         Color();
         Color(bool);
+        ~Color();
     
 };
 
