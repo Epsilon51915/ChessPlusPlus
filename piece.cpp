@@ -3,6 +3,7 @@
 Pawn::Pawn(bool isWhite, int file_)
 {
     moved = false;
+    piece_type = 'P';
     if(isWhite)
     {
         rank = 2;
@@ -20,6 +21,7 @@ bool Pawn::move_valid() {return true;}
 Rook::Rook(bool isWhite, int file_)
 {
     moved = false;
+    piece_type = 'R';
     if(isWhite)
     {
         rank = 1;
@@ -36,6 +38,7 @@ bool Rook::move_valid() {return true;}
 
 Knight::Knight(bool isWhite, int file_)
 {
+    piece_type = 'N';
     if(isWhite)
     {
         rank = 1;
@@ -52,6 +55,7 @@ bool Knight::move_valid() {return true;}
 
 Bishop::Bishop(bool isWhite, int file_)
 {
+    piece_type = 'B';
     if(isWhite)
     {
         rank = 1;
@@ -68,6 +72,7 @@ bool Bishop::move_valid() {return true;}
 
 Queen::Queen(bool isWhite)
 {
+    piece_type = 'Q';
     if(isWhite)
     {
         rank = 1;
@@ -84,6 +89,7 @@ bool Queen::move_valid() {return true;}
 
 King::King(bool isWhite)
 {
+    piece_type = 'K';
     moved = false;
     if(isWhite)
     {

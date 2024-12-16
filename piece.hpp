@@ -6,6 +6,7 @@ class Piece
     public:
     int rank; // Rows 1-8
     int file; // Cols a-h
+    char piece_type;
     virtual void move() = 0;
     virtual bool move_valid() = 0;
 };
