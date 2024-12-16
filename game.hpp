@@ -6,7 +6,8 @@
 class Game
 {
     private:
-        Board board;
+        // Curly braces automatically construct board
+        Board board{};
     public:
         Game();
         void setup();
