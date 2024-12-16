@@ -9,8 +9,6 @@ Board::Board()
     {
         board[i/8][i%8] = Tile(static_cast<char>(97 + (i/8)), (i%8) + 1);
     }
-    // white = Color(true);
-    // black = Color(false);
 }
 
 void Board::display()
@@ -21,9 +19,23 @@ void Board::display()
         {
             cout << endl;
         }
-        cout << "[";
-        board[i%8][(63-i)/8].displayFileAndRank();
-        cout << "] ";
+        if(board[i%8][(63-i)/8].empty())
+        {
+            cout << "[ ] ";
+        }
+        else
+        {
+            cout << "[" << board[i%8][(63-i)/8].pieceType() << "] ";
+        }
     }
     cout << endl;
+}
+
+Color& Board::getColor(bool isWhite)
+{
+    if(isWhite)
+    {
+        return white;
+    }
+    return black;
 }

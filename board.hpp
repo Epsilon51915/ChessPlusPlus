@@ -7,13 +7,13 @@
 class Board
 {
     private:
-        Color black;
-        Color white;
+        Color black{false};
+        Color white{true};
         Tile board[8][8];
     public:
         Board();
         void display();
-
+        Color& getColor(bool);
 };
 
 #endif
