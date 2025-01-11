@@ -7,6 +7,7 @@ int main()
 {
     cout << "Hello, world!" << endl;
     Game game;
+    game.setup();
     game.gameLoop();
     return 0;
 }

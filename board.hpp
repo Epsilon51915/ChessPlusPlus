@@ -10,10 +10,12 @@ class Board
         Color black{false};
         Color white{true};
         Tile board[8][8];
+        Piece *pieces[32];
     public:
         Board();
+        ~Board();
         void display();
-        Color& getColor(bool);
+        void setup();
 };
 
 #endif

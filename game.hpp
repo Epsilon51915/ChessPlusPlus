@@ -10,6 +10,7 @@ class Game
         Board board{};
     public:
         Game();
+        ~Game();
         void setup();
         bool gameLoop();
 };

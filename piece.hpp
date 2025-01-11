@@ -7,13 +7,9 @@ class Piece
     int rank; // Rows 1-8
     int file; // Cols a-h
     char piece_type;
+    bool color;
     virtual void move() = 0;
     virtual bool move_valid() = 0;
-};
-
-class Blank : public virtual Piece
-{
-    
 };
 
 class Pawn : public virtual Piece
@@ -23,6 +19,7 @@ class Pawn : public virtual Piece
 
     public:
         Pawn(bool);
+        ~Pawn();
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -33,6 +30,7 @@ class Rook : public virtual Piece
         bool moved;
     public:
         Rook(bool);
+        ~Rook();
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -43,6 +41,7 @@ class Knight : public virtual Piece
 
     public:
         Knight(bool);
+        ~Knight();
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -53,6 +52,7 @@ class Bishop : public virtual Piece
 
     public:
         Bishop(bool);
+        ~Bishop();
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -63,6 +63,7 @@ class Queen : public virtual Piece
 
     public:
         Queen(bool);
+        ~Queen();
         virtual void move() override;
         virtual bool move_valid() override;
 };
@@ -73,6 +74,7 @@ class King : public virtual Piece
         bool moved;
     public:
         King(bool);
+        ~King();
         virtual void move() override;
         virtual bool move_valid() override;
 };

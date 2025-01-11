@@ -29,3 +29,8 @@ char Tile::pieceType()
 {
     return piece->piece_type;
 }
+
+void Tile::pieceMoveOn(Piece * newPiece)
+{
+    piece = newPiece;
+}

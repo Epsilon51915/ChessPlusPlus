@@ -1,13 +1,15 @@
 #include "game.hpp"
+#include <iostream>
 
-Game::Game()
-{
+using namespace std;
 
-}
+Game::Game() {}
 
 void Game::setup()
 {
-
+    cout << "Setting up..." << endl;
+    board.setup();
+    cout << "Setup complete!" << endl;
 }
 
 bool Game::gameLoop()

@@ -7,12 +7,9 @@ class Color
 {
     private:
         bool white;
-        Piece *pieces[16];
     public:
         Color();
         Color(bool);
-        ~Color();
-    
 };
 
 #endif
