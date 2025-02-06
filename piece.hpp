@@ -1,6 +1,8 @@
 #ifndef PIECE_HPP
 #define PIECE_HPP
 
+#include <iostream>
+
 class Piece
 {
     public:
@@ -9,6 +11,8 @@ class Piece
     char piece_type;
     bool color;
     virtual void move() = 0;
+    virtual ~Piece() { //std::cout << "Piece destroyed." << std::endl;
+    };
     virtual bool move_valid() = 0;
 };
 
