@@ -41,7 +41,7 @@ Board::~Board()
     for(int i = 0; i < 32; i++)
     {
         delete pieces[i];
-        cout << i << endl;
+        //cout << i << endl;
     }
 }
 
@@ -73,13 +73,23 @@ void Board::setup()
 
 void Board::display()
 {
+    cout << "*-----*-----*-----*-----*-----*";
+    char file;
     for(int i = 0; i < 64; i++)
     {
         if(i % 8 == 0)
         {
             cout << endl;
+            file = static_cast<char>(72 - (i/8));
+            cout << file << " ";
         }
         cout << board[(63-i)/8][i%8];
     }
-    cout << endl << endl;
+    cout << endl << "   1  2  3  4  5  6  7  8";
+    cout << endl << "*-----*-----*-----*-----*-----*" << endl << endl << endl;
+}
+
+bool Board::viewTile(int rank, int file)
+{
+    return board[rank][file].empty();
 }

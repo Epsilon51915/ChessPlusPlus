@@ -16,6 +16,7 @@ class Board
         ~Board();
         void display();
         void setup();
+        bool viewTile(int, int);
 };
 
 #endif
